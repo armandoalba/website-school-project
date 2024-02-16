@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Razer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="fondo">
+    <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="imgs/rzerlogo.png" alt="Bootstrap" width="30" height="24">Razer
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="accesorios.html">Accesorios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <div>
+      <video width="1500" height="600" controls>
+      <source src="imgs/Razer Edge   Ultimate Android Gaming Handhel.mp4" type="video/mp4">
+      <source src="imgs/Razer Edge   Ultimate Android Gaming Handhel[1].mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <h5 class="card-title encabezado"><strong>Orden de compra</strong></h5> 
+          <br>
+          <div>
+            <input type="float" id="nomcliente" class="form-control" placeholder="Nombre del cliente" aria-label="Nombre del cliente" aria-describedby="addon-wrapping"> 
+            <select id="producto" class="form-select" aria-label="Selecciona un producto" aria-describedby="addon-wrapping">
+              <option selected>Selecciona un producto</option>
+              <option value=159>Razer Basilik V3 Pro $159 USD</option>
+              <option value=4249>Razer Hammerhead Hyperspeed $4249 USD</option>
+              <option value=199>Razer Blade 17 V4 Elite $199</option>
+              <option value=129>Razer Edge 5G Para Android $129</option>
+              <option value=59>Razer Charging Pad Chroma $59 USD</option>
+              <option value=429>Razer Iskur-Green $499 USD</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-success" onclick="agregarProductos()">Agregar al carrito</button>
+            <br>               
+            <button type="button" class="btn btn-success" onclick="mostrarTotal()" data-bs-toggle="modal" data-bs-target="#modal">Total de la orden</button>               
+          </div> 
+        </div>
+        <div class="col-7">
+          <div class="card-body" style="width: 18rem;">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                  <h5 class="card-title encabezado">Carrito:</h5> 
+                  <ul id="carrito" class="list-group my-2">
+                  </ul>                                
+              </div>       
+            </div>
+          </div>
+          
+          <button type="button" class="btn btn-primary" id="liveToastBtn" style="background-color: green;">Finalizar compra</button>
+
+          <div class="toast-container position-fixed bottom-0 end-0 p-6">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="imgs/rzerlogo.png" width="30" class="rounded me-2" alt="...">
+                <strong class="me-auto">Compra exitosa</strong>
+                <small><strong2>Now</strong2></small>
+                <strong><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></strong>
+              </div>
+              <div class="toast-body">
+                Su pedido ha sido enviado con éxito, ¡muchas gracias por su compra!
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+  
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Resumen de la orden</h1>
+          </div>
+          <div class="modal-body">
+            <h6 id="suma1"></h6>
+            <h6 id="suma2"></h6>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Aceptar</button>
+          </div>      
+        </div>
+      </div>
+    </div>
+    
+    <script src="toast.js"></script>
+    <script src="compras.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>

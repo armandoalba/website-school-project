@@ -1,0 +1,70 @@
+.wrap{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(0 0 0/.15), rgb(0 0 0/.35)), url(imgs/rzrback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.wrap-text{
+    padding-top: 500px;
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+.container{
+    width: 100vw;
+    height: 70vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(0 0 0/.15), rgb(0 0 0/.35)), url(imgs/dsad.png);
+    background-size: cover;
+    background-position: center;
+}
+strong{
+    color: white;
+}
+.fondo{
+    background-color: black;
+}
+.fondo2{
+    background-color: black;
+}
+.container2{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(0 0 0/.15), rgb(0 0 0/.35)), url(imgs/fondo3.png);
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+.card-body{
+    background-color: black;
+    color: white;
+}
+.card-tittle{
+    color: white;
+}
+.me-auto{
+    color: black;
+    background-color: white;
+}
+.toast-header{
+    background-color: white;
+}
+small{
+    color: black;
+}
+.strong2{
+    color: black;
+}
+.containerff{
+    background-color: black;
+    color: white;
+}
